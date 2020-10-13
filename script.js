@@ -17,6 +17,7 @@ function searchAPI(city) {
     console.log(wind);
 
     $(".displaycurrentweather").append(temperature);
+    $(".displaycurrentweather").append(humidity);
   });
 }
 
