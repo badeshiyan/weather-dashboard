@@ -49,7 +49,7 @@ function searchAPI(city) {
   });
 
   var queryFiveDay =
-    "http://api.openweathermap.org/data/2.5/forecast?q=" +
+    "https://api.openweathermap.org/data/2.5/forecast?q=" +
     city +
     "&units=imperial&appid=b6888160cea1ac7e31cb37a7c245701a";
 
