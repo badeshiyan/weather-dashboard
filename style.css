@@ -1,0 +1,23 @@
+#citpopup {
+  border-style: solid;
+  border-color: lightgrey;
+  border-radius: 3px;
+  border-width: 1px;
+  padding-left: 10px;
+}
+
+#fiveDay {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+#forecasts {
+  background-color: #0064c2;
+  border-width: 1px;
+  border-style: solid;
+  border-color: lightslategray;
+  border-radius: 10px;
+  margin: 5px;
+  color: white;
+  font-size: small;
+}
