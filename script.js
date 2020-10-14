@@ -33,7 +33,7 @@ function searchAPI(city) {
   console.log(lat);
   console.log(lon);
   var queryUV =
-    "http://api.openweathermap.org/data/2.5/uvi?lat=" +
+    "https://api.openweathermap.org/data/2.5/uvi?lat=" +
     lat +
     "&lon=" +
     lon +
