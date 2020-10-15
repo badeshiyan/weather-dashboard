@@ -2,33 +2,19 @@ function searchAPI(city) {
   //   console.log("i am here");
   var lat = 0;
   var lon = 0;
+  var d = new Date();
+  var m = d.getMonth() + 1;
+  var dt = d.getDate();
+  var yr = d.getFullYear();
+
   // current weather block
   var queryURL =
     "https://api.openweathermap.org/data/2.5/weather?q=" +
     city +
     "&units=imperial&appid=b6888160cea1ac7e31cb37a7c245701a";
-  //   console.log("i am here");
   $.ajax({
     method: "GET",
     url: queryURL,
-    success: function (response) {
-      //   var queryUV =
-      //     "https://api.openweathermap.org/data/2.5/uvi?lat=" +
-      //     lat +
-      //     "&lon=" +
-      //     lon +
-      //     "&appid=b6888160cea1ac7e31cb37a7c245701a";
-
-      //   $.ajax({
-      //     method: "GET",
-      //     url: queryUV,
-      //     async: true,
-      //   }).then(function (response) {
-      //     console.log(response);
-      //     var uvindex = response.value;
-      //   });
-      console.log("i am here");
-    },
   }).then(function (response) {
     console.log(response);
     var temperature = response.main.temp;
@@ -42,21 +28,38 @@ function searchAPI(city) {
     lon = response.coord.lon;
     console.log("longitude: " + lon);
 
-    $(".displaycurrentweather").append(
-      "Temperature " + temperature + " &#8457;"
+    var queryUVI =
+      "https://api.openweathermap.org/data/2.5/uvi?lat=" +
+      lat +
+      "&lon=" +
+      lon +
+      "&appid=b6888160cea1ac7e31cb37a7c245701a";
+
+    // then query uv index
+    $.ajax({
+      method: "GET",
+      url: queryUVI,
+    }).then(function (response) {
+      console.log(response);
+      var uvi = response.value;
+      console.log("uvi index: " + uvi);
+      $(".displaycurrentuvi").append("UV Index: " + uvi);
+    });
+
+    $(".displaycurrentcity").append(
+      city + " (" + m + "/" + dt + "/" + yr + ")"
     );
+    $(".displaycurrenttemp").append("Temperature: " + temperature + " &#8457;");
     $(".displaycurrenthumidity").append("Humidity: " + humidity + "%");
     $(".displaycurrentwind").append("Wind Speed: " + wind + " mph");
   });
-  //   console.log("i am here");
-  //   console.log(lat);
-  //   console.log(lon);
 
   var queryFiveDay =
     "https://api.openweathermap.org/data/2.5/forecast?q=" +
     city +
     "&units=imperial&appid=b6888160cea1ac7e31cb37a7c245701a";
 
+  // five day forecast
   $.ajax({
     method: "GET",
     url: queryFiveDay,
@@ -99,7 +102,7 @@ function searchAPI(city) {
     $(".displaydayfivehum").append("Humidity: " + DayFiveHum + "%");
   });
 }
-
+// search button
 $("#searchBtn").on("click", function () {
   var cityName = $("#searchCity").val();
   searchAPI(cityName);

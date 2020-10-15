@@ -1,9 +1,11 @@
-#citpopup {
+#citypopup {
   border-style: solid;
-  border-color: lightgrey;
+  border-color: #ccd2d9;
   border-radius: 3px;
   border-width: 1px;
   padding-left: 10px;
+  margin: 50px;
+  width: 500px;
 }
 
 #fiveDay {
@@ -15,9 +17,10 @@
   background-color: #0064c2;
   border-width: 1px;
   border-style: solid;
-  border-color: lightslategray;
+  border-color: #ccd2d9;
   border-radius: 10px;
   margin: 5px;
-  color: white;
+  color: #ffffff;
   font-size: small;
+  float: left;
 }

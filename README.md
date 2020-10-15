@@ -10,13 +10,7 @@ Please find the deployed webpage link here: https://badeshiyan.github.io/weather
 
 ## Screenshots of Deployed Webpage
 
-![Bambo Adeshiyan](assets/cqscreenshot1.png)
-
-![Bambo Adeshiyan](assets/cqscreenshot2.png)
-
-![Bambo Adeshiyan](assets/cqscreenshot3.png)
-
-![Bambo Adeshiyan](assets/cqscreenshot4.png)
+![Adeshiyan Weather Dashboard](./Assets/weatherdashboard.png)
 
 ## Credits
 
@@ -53,7 +47,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
-```
-
-```
