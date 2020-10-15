@@ -10,7 +10,7 @@ Please find the deployed webpage link here: https://badeshiyan.github.io/weather
 
 ## Screenshots of Deployed Webpage
 
-![Adeshiyan Weather Dashboard](./Assets/weatherdashboard.png)
+![Adeshiyan Weather Dashboard](./assets/weatherdashboard.png)
 
 ## Credits
 
